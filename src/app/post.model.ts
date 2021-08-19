@@ -1,9 +1,8 @@
 export class Post {
     constructor(
-        private title:string,
-        private content:string,
-        private loveIt:number,
-        private hateIt:number,
-        private date:string,
+        public title:string,
+        public content:string,
+        public date:string,
+        public loveIt:number = 0,
         ){}
 }

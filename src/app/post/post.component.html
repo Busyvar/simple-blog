@@ -1,0 +1,8 @@
+<article class="container">
+    <h2>{{title}}</h2>
+    <p>{{content}}</p>
+    <button class="btn btn-success" (click)="like()">Love-it</button>
+    <button class="btn btn-danger"   (click)="dislike()">Hate-it</button>
+    <p>Score:{{loveIt}}</p>
+    <p>date de création:{{ date | date: 'hh:mm dd/MM/YYYY' | uppercase }}</p>
+</article>
