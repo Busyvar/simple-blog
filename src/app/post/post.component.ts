@@ -20,16 +20,14 @@ export class PostComponent implements OnInit {
   }
 
   like(){
-    console.log("yeah!");
     this.loveIt += 1;
     this.postService.updateOneLoveIt(this.index, this.loveIt);
   }
   dislike(){
-    console.log("booh!");
     this.loveIt -= 1;
     this.postService.updateOneLoveIt(this.index, this.loveIt);
   }
-  removePost(){
+  deletePost(){
     this.postService.deletePost(this.index);
   }
 }
