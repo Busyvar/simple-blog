@@ -25,4 +25,9 @@ export class PostService {
     this.postList[i].loveIt = val;
     this.emitPosts();
   }
+
+  deletePost(id:number){
+    this.postList.splice(id, 1);
+    this.emitPosts();
+  }
 }

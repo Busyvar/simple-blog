@@ -2,15 +2,13 @@
     <div class="col-xs-12">
         <h2>Liste des posts</h2>
         <div class="list-group">
-            <div class="list-group-item">
-                <app-post *ngFor="let post of posts; let i = index"
-                [index]="i"
-                [title]="post.title"
-                [content]="post.content"
-                [date]="post.date"
-                [loveIt]="post.loveIt"
-                ></app-post>
-            </div>
+            <app-post *ngFor="let post of posts; let i = index"
+            [index]="i"
+            [title]="post.title"
+            [content]="post.content"
+            [date]="post.date"
+            [loveIt]="post.loveIt"
+            ></app-post>
         </div>
     </div>
 </div>

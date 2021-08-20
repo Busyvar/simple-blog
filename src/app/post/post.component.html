@@ -1,8 +1,18 @@
-<article class="container">
-    <h2>{{title}}</h2>
-    <p>{{content}}</p>
-    <button class="btn btn-success" (click)="like()">Love-it</button>
-    <button class="btn btn-danger"   (click)="dislike()">Hate-it</button>
-    <p>Score:{{loveIt}}</p>
+<article class="list-group-item" [ngClass]="{
+    'list-group-item-danger':loveIt<-5,
+    'list-group-item-success':loveIt>5
+}">
+    <h3 class="list-group-item-heading">
+        {{title}}
+        <button class="btn btn-default to-right-of-post " (click)="removePost()">
+            <span class=" glyphicon glyphicon-trash"></span>
+        </button>
+    </h3>
     <p>date de création:{{ date | date: 'hh:mm dd/MM/YYYY' | uppercase }}</p>
+    <p class="list-group-item-text">{{content}}</p>
+    <div class="btn-group">
+        <button class="btn btn-success" (click)="like()">Love-it</button>
+        <button class="btn btn-danger"   (click)="dislike()">Hate-it</button>
+    </div>
+    <span class="to-right-of-post ">Score:{{loveIt}}</span>
 </article>

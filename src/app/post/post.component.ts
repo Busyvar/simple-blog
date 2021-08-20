@@ -29,4 +29,7 @@ export class PostComponent implements OnInit {
     this.loveIt -= 1;
     this.postService.updateOneLoveIt(this.index, this.loveIt);
   }
+  removePost(){
+    this.postService.deletePost(this.index);
+  }
 }
